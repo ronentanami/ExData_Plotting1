@@ -22,7 +22,7 @@ Program steps:
 8. Enrich the Combined DF with the Activity ID
 9. Enrich the combined DF with the Activity Name
 
-10. We would like to reduce the 561 features to only the ones include "mean()" and "std()". For this we created a new tidy DF called "??".
+10. We would like to reduce the 561 features to only the ones include "mean()" and "std()". For this we created a new tidy DF called "Tidy_DF".
 Note, there are other features including the name "mean" (e.g. "angle (Z,gravityMean)") that I decided to ignore. I am taking only
 the features that are ended either by "mean()" or "std()"
 
