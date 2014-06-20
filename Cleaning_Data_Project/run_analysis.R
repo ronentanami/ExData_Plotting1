@@ -5,7 +5,9 @@
 
 
 library(reshape2)
-setwd("~/Data Science/Getting and Cleaning Data/Work")
+library(plyr)
+
+setwd("~/Data Science/Getting and Cleaning Data/Work/UCI HAR Dataset/Results")
 
 ## Reading Feature List
 feature_List <- read.table("~/Data Science/Getting and Cleaning Data/Work/UCI HAR Dataset/features.txt", sep = "", 
@@ -69,7 +71,7 @@ comb_Activity = rbind(test_Activity, train_Activity)
 ## Enriching main DF with Subject and Activity columns
 ## *****************************************************************************************************
 
-comb_Activity = merge(comb_Activity, activity_Labels, by="activity_Id")
+comb_Activity = join(comb_Activity, activity_Labels, by="activity_Id")
 comb_DF$subject_Id = comb_Subject$subject_Id
 comb_DF$activity_Id = comb_Activity$activity_Id
 comb_DF$activity_Name = comb_Activity$activity_Name
